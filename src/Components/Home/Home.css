@@ -1,0 +1,253 @@
+main {
+    min-height: calc(100vh - 110px);
+    padding: 40px 80px;
+    display: flex;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+}
+
+.info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 max(10%, 80px);
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    /* transform: translateY(200px);
+    opacity: 0.5; */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.line {
+    border: 1.5px solid var(--text);
+    min-height: 25px;
+}
+
+.line:nth-last-child(1) {
+    display: none;
+}
+
+.follow {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 8px 3px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 600;
+    background: rgb(255 255 255 / 10%);
+    backdrop-filter: blur(3px);
+    color: var(--text);
+}
+
+.info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 max(10%, 80px);
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+}
+
+.fPara {
+    font-size: 23px;
+    color: var(--accent2);
+    font-weight: 500;
+}
+
+.sPara {
+    line-height: 0.85;
+    color: var(--accent);
+    font-size: 78px;
+    font-weight: 700;
+}
+
+.tPara {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--accent2);
+    margin-top: 15px;
+}
+
+.info div {
+    margin-top: 40px;
+}
+
+.info a {
+    border: 3px solid var(--accent2);
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-weight: 500;
+    color: var(--text);
+    transition: opacity 0.1s;
+}
+
+.info a:hover {
+    opacity: 0.9;
+}
+
+.info a:nth-of-type(2) {
+    background-color: var(--accent2);
+    color: var(--lw);
+}
+
+#books {
+    display: flex;
+    justify-content: center;
+    padding: 50px max(7%, 30px);
+    margin-top: 40px;
+    padding-top: 120px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#books .booksTag {
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+#books .line {
+    width: 0;
+    min-height: 70px;
+}
+
+.booksInfo {
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0px 30px 50px 80px;
+}
+
+#books {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        padding: 30px 50px;
+    }
+
+    .info {
+        padding: 0 max(5%, 30px);
+    }
+}
+
+@media screen and (max-width: 710px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .line {
+        max-height: 0;
+        min-height: 0;
+        min-width: 70px;
+        order: 1;
+        font-size: 0;
+    }
+    .line:nth-last-child(1) {
+        display: block;
+        order: 1 !important;
+    }
+    .follow {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        order: 1;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .aboutInfo,
+    .booksInfo {
+        padding: 40px max(5%, 40px);
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    #about {
+        padding: 50px max(4%, 30px);
+    }
+
+    .aboutInfo p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .info{
+        align-items: center;
+    }
+
+    #books{
+        flex-direction: column-reverse;
+    }
+
+    #books .booksTag {
+        flex-direction: row;
+        transform: none;
+        justify-content: center;
+    }
+
+    #books .follow {
+        transform: none;
+        writing-mode: rl;
+    }
+
+    #books .line {
+        min-height: 0;
+        width: 60px;
+    }
+
+    #books .line:nth-last-child(1) {
+        display: block;
+    }
+
+    #about p {
+        text-align: center;
+        padding: 0;
+    }
+
+    .btnGroup {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1410px) {
+    .booksInfo {
+        padding-left: 0;
+        justify-content: center;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #books {
+        padding: 50px max(4%, 30px);
+    }
+    .booksInfo {
+        padding-right: 0;
+        padding-top: 50px;
+    }
+} 

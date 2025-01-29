@@ -1,0 +1,34 @@
+#root {
+  background-color: var(--bg);
+}
+
+footer {
+  background-color: rgba(255 255 255 / 0.5);
+  padding: 50px 120px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+footer>a {
+  background: var(--dg);
+  color: var(--lw);
+  padding: 5px 13px;
+  border-radius: 5px;
+  display: block;
+}
+
+footer span a{
+  text-decoration: underline;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    padding: 50px 40px;
+  }
+}
