@@ -11,10 +11,11 @@ This static bookstore web app was bootstrapped with `Vite` as a solution to spAt
 ## Features implemented
 
  - Data fetching from external js file
- - State management with `useState` and local data retention with `localStorage`for managing cart items
+ - State management with `useState` and `useContext`, and local data retention with `localStorage`for managing cart items
  - Responsive design
+ - Routing with `react-router-dom`
+ - Dedicated cart management page with quantity management and subtotal indication
  
 ## Future plans
 
- - Functional cart page for managing cart items and quantity
- - Option for checkout with price breakdown based on product and quantity
+ - Indicating total billing amount and checkout option on cart page

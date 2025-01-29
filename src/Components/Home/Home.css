@@ -19,8 +19,6 @@ main {
     padding: 0 max(10%, 80px);
     justify-content: center;
     font-family: "Lato", sans-serif;
-    /* transform: translateY(200px);
-    opacity: 0.5; */
 }
 
 .links {
@@ -107,7 +105,7 @@ main {
     color: var(--lw);
 }
 
-#books {
+#books, #cart {
     display: flex;
     justify-content: center;
     padding: 50px max(7%, 30px);
@@ -115,13 +113,14 @@ main {
     padding-top: 120px;
 }
 
-.books {
+.books, .cartInfo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#books .booksTag {
+#books .booksTag,
+#cart .cartTag {
     transform: rotate(180deg);
     display: flex;
     flex-direction: column;
@@ -129,18 +128,12 @@ main {
     align-items: center;
 }
 
-#books .line {
+#books .line, #cart .line {
     width: 0;
     min-height: 70px;
 }
 
-.booksInfo {
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0px 30px 50px 80px;
-}
-
-#books {
+#books, #cart {
     margin-top: 50px;
 }
 
@@ -178,20 +171,9 @@ main {
     }
 }
 
-@media screen and (max-width: 1320px) {
-    .aboutInfo,
-    .booksInfo {
-        padding: 40px max(5%, 40px);
-    }
-}
-
 @media screen and (max-width: 1070px) {
     #about {
         padding: 50px max(4%, 30px);
-    }
-
-    .aboutInfo p {
-        margin: 0;
     }
 }
 
@@ -200,27 +182,27 @@ main {
         align-items: center;
     }
 
-    #books{
+    #books, #cart{
         flex-direction: column-reverse;
     }
 
-    #books .booksTag {
+    #books .booksTag , #cart .cartTag {
         flex-direction: row;
         transform: none;
         justify-content: center;
     }
 
-    #books .follow {
+    #books .follow, #cart .follow {
         transform: none;
         writing-mode: rl;
     }
 
-    #books .line {
+    #books .line, #cart .line {
         min-height: 0;
         width: 60px;
     }
 
-    #books .line:nth-last-child(1) {
+    #books .line:nth-last-child(1), #cart .line:nth-last-child(1) {
         display: block;
     }
 
@@ -234,20 +216,8 @@ main {
     }
 }
 
-@media screen and (max-width: 1410px) {
-    .booksInfo {
-        padding-left: 0;
-        justify-content: center;
-        padding-top: 0;
-    }
-}
-
 @media screen and (max-width: 900px) {
-    #books {
+    #books, #cart {
         padding: 50px max(4%, 30px);
-    }
-    .booksInfo {
-        padding-right: 0;
-        padding-top: 50px;
     }
 } 

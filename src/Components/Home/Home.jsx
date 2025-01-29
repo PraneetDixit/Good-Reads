@@ -15,8 +15,8 @@ export default function Home() {
 
     const removeFromCart=(id)=>{
         let newCart={...cart};
-        saveCart(newCart);
         delete newCart[id];
+        saveCart(newCart);
         setCart(newCart);
     }
 
