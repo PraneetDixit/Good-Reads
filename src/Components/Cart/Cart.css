@@ -1,11 +1,11 @@
-#cart{
+#cart {
     padding-top: 20px;
     margin-top: 0;
     min-height: 450px;
 }
 
-#cart .spacer{
-    order: initial
+#cart .spacer {
+    order: initial;
 }
 
 .cartInfo {
@@ -17,12 +17,12 @@
     width: 100%;
 }
 
-.cartDetails{
+.cartDetails {
     display: flex;
     flex-direction: column;
 }
 
-.cartInfo #empty{
+.cartInfo #empty {
     background-color: #ffffffb3;
     padding: 40px 50px;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@
     color: var(--text);
 }
 
-.cartItem{
+.cartItem {
     background-color: #ffffffb3;
     padding: 20px;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
@@ -38,10 +38,10 @@
     color: var(--text);
     margin-bottom: 15px;
     display: flex;
-    width: min(95%,800px);
+    width: min(95%, 800px);
 }
 
-.cartItem img{
+.cartItem img {
     width: 125px;
     height: 125px;
     object-fit: cover;
@@ -49,7 +49,7 @@
     margin-right: 20px;
 }
 
-.cartQuantity{
+.cartQuantity {
     align-self: flex-start;
     border-radius: 10px;
     background-color: var(--bg);
@@ -57,20 +57,49 @@
     border: 1px solid var(--ldb);
 }
 
-.cartQuantity button, .cartQuantity span{
+.cartQuantity button,
+.cartQuantity span {
     padding: 5px 8px;
     font-size: 12px;
     font-weight: 600;
 }
 
-.cartQuantity span{
+.cartQuantity span {
     margin: 0 6px;
 }
 
-.cartTitle{
+.cartTitle {
     font-weight: 600;
 }
 
-.cartAuthor{
+.cartAuthor {
     font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .cartItem {
+        flex-direction: column;
+        align-items: center;
+        width: min(350px, 95%);
+    }
+
+    .cartDetails{
+        align-items: center;
+    margin: 10px 0;
+    }
+
+    .cartTitle{
+        text-align: center;
+    }
+
+    .cartItem img{
+        width: min(200px, 95%);
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: 0;
+    }
+
+    .cartQuantity{
+        align-self: center;
+    }
 }

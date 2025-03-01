@@ -32,3 +32,16 @@ footer span a{
     padding: 50px 40px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  footer {
+    position: relative;
+    padding: 30px;
+  }
+
+  footer>a{
+    position: absolute;
+    top:-50px;
+    right: 30px;
+  }
+}
