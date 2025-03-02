@@ -9,6 +9,7 @@ export const CartContext = createContext();
 
 function App() {
     const [cart, setCart] = useState({});
+    const [isVisible, setIsVisible] = useState(false);
 
     const saveCart = (cart) => {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -23,6 +24,19 @@ function App() {
 
     useEffect(() => {
         getCart();
+        const handleScroll = () => {
+            if (window.scrollY > 700) {
+              setIsVisible(true);
+            } else {
+              setIsVisible(false);
+            }
+          };
+      
+          window.addEventListener('scroll', handleScroll);
+      
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
     }, []);
 
     return (
@@ -44,8 +58,8 @@ function App() {
                             &copy; 2025 Good Reads. All rights reserved.
                         </span>
                         </div>
-                        <a href="#">⬆</a>
                     </footer>
+                    <a href="#" id="top" style={isVisible?{display: "block"}:{display: "none"}}>⬆</a>
                 </Router>
             </CartContext.Provider>
         </>

@@ -16,12 +16,19 @@ footer {
   display: flex;
 }
 
-footer>a {
+#top {
   background: var(--dg);
   color: var(--lw);
   padding: 5px 13px;
   border-radius: 5px;
   display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+#top:hover {
+  background: var(--llb);
 }
 
 footer span a{
@@ -38,13 +45,13 @@ footer span a{
 
 @media screen and (max-width: 450px) {
   footer {
-    position: relative;
+    /* position: relative; */
     padding: 30px;
   }
 
-  footer>a{
+  /* footer>a{
     position: absolute;
     top:-50px;
     right: 30px;
-  }
+  } */
 }

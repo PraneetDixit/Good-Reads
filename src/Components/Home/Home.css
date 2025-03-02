@@ -93,11 +93,14 @@ main {
     margin-right: 10px;
     font-weight: 500;
     color: var(--text);
-    transition: opacity 0.1s;
+    transition: opacity 0.1s, transform 0.5s;
+    display: inline-block;
+    /* will-change: transform; */
 }
 
 .info a:hover {
     opacity: 0.9;
+    transform: translateY(-3px);
 }
 
 .info a:nth-of-type(2) {

@@ -27,7 +27,7 @@ ul{
 }
 
 li{
-
+    position: relative;
     margin: 0 18px;
 }
 
@@ -48,6 +48,23 @@ li a{
     font-size: 17px;
     text-transform: uppercase;
     transition: opacity 0.1s;
+}
+
+li:not(:last-child):after{
+    display: block;
+    content: "";
+    min-width: 90%;
+    height: 2px;
+    background-color: var(--lr);
+    position: absolute;
+    bottom: -2px;
+    left: 5%;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+}
+
+li:hover::after{
+    transform: scaleX(1);
 }
 
 li a:hover{
@@ -101,7 +118,8 @@ nav button{
         position: absolute;
         top: 80px;
         left: 0;
-        background-color: var(--bg);
+        background-color: rgb(241 250 238/70%);
+        backdrop-filter: blur(3px);
     }
 
     ul.show{
