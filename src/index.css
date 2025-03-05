@@ -28,6 +28,13 @@
   --accent2: var(--lr);
 }
 
+#wrapper.dark{
+  --bg: var(--ddb);
+  --accent: var(--dg);
+  --text: var(--dw);
+  --bg-ham: rgba(17, 26, 40, 0.7);
+}
+
 a{
   text-decoration: none;
   color: inherit;

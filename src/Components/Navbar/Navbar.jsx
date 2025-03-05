@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [expand, setexpand] = useState(false);
     const location = useLocation();
     const navRef = useRef();
@@ -45,6 +45,14 @@ export default function Navbar() {
                     <Link to={"/cart"}>Cart</Link>
                 </li>
             </ul>
+            <button id="toggle" onClick={props.toggleTheme}>
+        {props.theme==="light" &&
+        <>&#x1F319;</>
+        }
+        {props.theme==="dark" &&
+        <>&#x1F31E;</>
+        }
+      </button>
             <button id="hamburger" onClick={toggleNav}>
                 <>&#x2630;</>
             </button>

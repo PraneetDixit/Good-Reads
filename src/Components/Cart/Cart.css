@@ -41,6 +41,10 @@
     width: min(95%, 800px);
 }
 
+.dark .cartItem{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .cartItem img {
     width: 125px;
     height: 125px;
@@ -55,6 +59,10 @@
     background-color: var(--bg);
     display: flex;
     border: 1px solid var(--ldb);
+}
+
+.dark .cartQuantity{
+    background-color: var(--ldb);
 }
 
 .cartQuantity button,

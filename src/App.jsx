@@ -11,6 +11,11 @@ function App() {
     const [cart, setCart] = useState({});
     const [isVisible, setIsVisible] = useState(false);
 
+    const [theme, settheme] = useState("light");
+  const toggleTheme = () => {
+    settheme(theme === "light" ? "dark" : "light");
+  };
+
     const saveCart = (cart) => {
         localStorage.setItem("cart", JSON.stringify(cart));
     };
@@ -41,9 +46,10 @@ function App() {
 
     return (
         <>
+            <div id="wrapper" className={theme === "light" ? "" : "dark"}>
             <CartContext.Provider value={{ cart, setCart, saveCart }}>
                 <Router>
-                    <Navbar />
+                    <Navbar theme={theme} toggleTheme={toggleTheme}/>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/cart" element={<Cart />} />
@@ -62,6 +68,7 @@ function App() {
                     <a href="#" id="top" style={isVisible?{display: "block"}:{display: "none"}}>⬆</a>
                 </Router>
             </CartContext.Provider>
+            </div>
         </>
     );
 }

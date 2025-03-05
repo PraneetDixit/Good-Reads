@@ -1,8 +1,12 @@
-#root {
+/* #root {
   background-color: var(--bg);
+} */
+
+#wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg);
 }
 
 footer {
@@ -14,6 +18,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   display: flex;
+}
+
+.dark footer{
+  background-color: rgba(0 0 0 / 0.1);
+  color: var(--dw);
 }
 
 #top {

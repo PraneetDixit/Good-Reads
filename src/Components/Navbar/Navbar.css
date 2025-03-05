@@ -122,6 +122,14 @@ nav button{
         backdrop-filter: blur(3px);
     }
 
+    .dark ul{
+        background-color: rgb(0 0 0 / 15%);
+    }
+
+    li:last-of-type{
+        margin-top: 8px;
+    }
+
     ul.show{
         height: fit-content;
         padding-bottom: 30px;
