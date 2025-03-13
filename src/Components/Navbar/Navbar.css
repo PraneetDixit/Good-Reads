@@ -139,3 +139,10 @@ nav button{
         padding: 12px;
     }
 }
+
+@media screen and (max-width: 380px){
+    nav{
+        padding: 20px min(5%, 10px);
+    }
+    
+}
